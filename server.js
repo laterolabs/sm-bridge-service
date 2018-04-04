@@ -146,7 +146,7 @@ exports.shutDown = shutDown;
  */
 ////////////////////////////////////////////////////////
 
-app.use('/authorize/*', function (req, res, next) {
+app.use('/*', function (req, res, next) {
   // Log it
   winston.info("request: ", req.ip, req.headers["x-forwarded-for"], req.method, req.url, res.statusCode);
   next();
