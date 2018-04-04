@@ -146,7 +146,7 @@ exports.shutDown = shutDown;
  */
 ////////////////////////////////////////////////////////
 
-app.use('/*', function (req, res, next) {
+app.use('/authorize*', function (req, res, next) {
   // Log it
   winston.info("request: ", req.ip, req.headers["x-forwarded-for"], req.method, req.url, res.statusCode);
   next();
@@ -204,11 +204,11 @@ if (SIMULATOR_MODE === "true") {
   // create application/x-www-form-urlencoded parser
   var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-  app.get('/authorize/*', function (req, res) {
+  app.get('/authorize*', function (req, res) {
     res.sendFile('./simulator/index.html', {root: __dirname});
   });
 
-  app.post('/authorize/*', urlencodedParser, function (req, res) {
+  app.post('/authorize*', urlencodedParser, function (req, res) {
 
     // Pull out form vars and convert to headers
     winston.debug("Forms vars: ", req.body);
@@ -222,7 +222,7 @@ if (SIMULATOR_MODE === "true") {
     });
   });
 } else {
-  app.get('/authorize/*', function (req, res) {
+  app.get('/authorize*', function (req, res) {
 
     // ensure required nonce parameter is provided
     if (!req.query["nonce"]) {
