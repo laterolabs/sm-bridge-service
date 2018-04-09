@@ -179,7 +179,7 @@ let createJWT = function (headers, nonce) {
       // Log it
       winston.debug("Issuing token for payload: ", data);
       winston.info("Issuing token for subject: ", data.sub);
-
+      winston.debug("JWT secret", process.env.SECRET)
       // Sign our token
       let idTokenSigned = jwt.sign(data, SECRET, { expiresIn: TOKEN_EXPIRY + 'm' });
 
