@@ -243,6 +243,8 @@ if (SIMULATOR_MODE === "true") {
       }
     }
 
+    winston.debug("Forms vars: ", req.headers);
+
     // Call out function to get the JWT
     createJWT(req.headers, decodeURIComponent(req.query["nonce"]))
       .then(function (token) {
