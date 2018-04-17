@@ -22,7 +22,7 @@ else {
     {"incoming": "SMGOV_USERIDENTIFIER", "outgoing": "sub", "required": true},
     {"incoming": "SMGOV_USERTYPE", "outgoing": "user_type", "required": true},
     {"incoming": "SMGOV_USERDISPLAYNAME", "outgoing": "name", "required": true},
-    {"incoming": "SMGOV_EMAIL", "outgoing": "email", "required": false},
+    {"incoming": "SMGOV_USEREMAIL", "outgoing": "email", "required": false},
     {"incoming": "SMGOV_BUSINESSGUID", "outgoing": "business_guid", "required": false},
     {"incoming": "SMGOV_BUSINESSLEGALNAME", "outgoing": "business_legal_name", "required": false},
     {"incoming": "SMGOV_MINISTRY", "outgoing": "ministry", "required": false},
@@ -179,7 +179,7 @@ let createJWT = function (headers, nonce) {
       // Log it
       winston.debug("Issuing token for payload: ", data);
       winston.info("Issuing token for subject: ", data.sub);
-      winston.debug("JWT secret", process.env.SECRET)
+
       // Sign our token
       let idTokenSigned = jwt.sign(data, SECRET, { expiresIn: TOKEN_EXPIRY + 'm' });
 
