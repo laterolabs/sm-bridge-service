@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SiteMinder Bridge Service Simulator</title>
-</head>
-<body>
-  <h1>Enter in values in the fields or pick a user</h1>
-  <script>
-    function fillForm(formValues) {
-      document.form1.userIdentifier.value = formValues[0];
-      document.form1.userType.value = formValues[1];
-      document.form1.userDisplayName.value = formValues[2];
-      document.form1.userEmail.value = formValues[3];
-      document.form1.businessGuid.value = formValues[4];
-      document.form1.businessLegalName.value = formValues[5];
-      document.form1.userMinistry.value = formValues[6];
-      document.form1.userOffice.value = formValues[7];
-    }
-  </script>
-  <a href="javascript:fillForm(['987123897198273123981723987123', 'Business', 'Angela SP', 'angela.vyskocil@gov.bc.ca', '2378ASKJSDN897978JHHJ', 'Joe\'s Donuts', '',''])">
-    User 1
-  </a>
-  &nbsp;
-  <a href="javascript:fillForm(['723987123987123897198273123', 'Internal', 'Darcy RSWH', 'angela.vyskocil@gov.bc.ca', '', '', 'MCFD','RKC'])">
-    User 1.5
-  </a>
-  &nbsp;&nbsp;
-  <a href="javascript:fillForm(['12321387jhaskjhdjkhsadads3', 'Internal', 'Sam RSW', 'angela.vyskocil@gov.bc.ca', '', '', 'MCFD', 'RKC'])">
-    User 2
-  </a>
-  <form name="form1" method="post">
-    <div>
-      <label for="userIdentifier">User Identifier</label>
-      <input id="userIdentifier" name="smgov_useridentifier" type="text">
-    </div>
-    <div>
-      <label for="userType">User Type</label>
-      <input id="userType" name="smgov_usertype" type="text">
-    </div>
-    <div>
-      <label for="userDisplayName">User Display Name</label>
-      <input id="userDisplayName" name="smgov_userdisplayname" type="text">
-    </div>
-    <div>
-      <label for="userEmail" >User Email</label>
-      <input id="userEmail" name="smgov_email" type="text">
-    </div>
-    <div>
-      <label for="businessGuid" >Business GUID</label>
-      <input id="businessGuid" name="smgov_businessguid" type="text">
-    </div>
-    <div>
-      <label for="businessLegalName" >Business Legal Name</label>
-      <input id="businessLegalName" name="smgov_businesslegalname" type="text">
-    </div>
-    <div>
-      <label for="userMinistry" >Ministry Acronym</label>
-      <input id="userMinistry" name="smgov_ministry" type="text">
-    </div>
-    <div>
-      <label for="userOffice" >Office Acronym</label>
-      <input id="userOffice" name="smgov_office" type="text">
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SiteMinder Bridge Service Simulator</title>
+  </head>
+  <body>
+    <h1>Enter in values in the fields or pick a user</h1>
+    <script>
+      function fillForm(formValues) {
+        document.form1.userIdentifier.value = formValues[0]
+        document.form1.userType.value = formValues[1]
+        document.form1.userDisplayName.value = formValues[2]
+        document.form1.userEmail.value = formValues[3]
+        document.form1.businessGuid.value = formValues[4]
+        document.form1.businessLegalName.value = formValues[5]
+        document.form1.userMinistry.value = formValues[6]
+        document.form1.userOffice.value = formValues[7]
+      }
+    </script>
+    <a
+      href="javascript:fillForm(['987123897198273123981723987123', 'Business', 'Angela SP', 'angela.vyskocil@gov.bc.ca', '2378ASKJSDN897978JHHJ', 'Joe\'s Donuts', '',''])"
+    >
+      User 1
+    </a>
+    &nbsp;
+    <a
+      href="javascript:fillForm(['723987123987123897198273123', 'Internal', 'Darcy RSWH', 'angela.vyskocil@gov.bc.ca', '', '', 'MCFD','RKC'])"
+    >
+      User 1.5
+    </a>
+    &nbsp;&nbsp;
+    <a
+      href="javascript:fillForm(['12321387jhaskjhdjkhsadads3', 'Internal', 'Sam RSW', 'angela.vyskocil@gov.bc.ca', '', '', 'MCFD', 'RKC'])"
+    >
+      User 2
+    </a>
+    <form name="form1" method="post">
+      <div>
+        <label for="userIdentifier">User Identifier</label>
+        <input id="userIdentifier" name="smgov_useridentifier" type="text" />
+      </div>
+      <div>
+        <label for="userType">User Type</label>
+        <input id="userType" name="smgov_usertype" type="text" />
+      </div>
+      <div>
+        <label for="userDisplayName">User Display Name</label>
+        <input id="userDisplayName" name="smgov_userdisplayname" type="text" />
+      </div>
+      <div>
+        <label for="userEmail">User Email</label>
+        <input id="userEmail" name="smgov_useremail" type="text" />
+      </div>
+      <div>
+        <label for="businessGuid">Business GUID</label>
+        <input id="businessGuid" name="smgov_businessguid" type="text" />
+      </div>
+      <div>
+        <label for="businessLegalName">Business Legal Name</label>
+        <input
+          id="businessLegalName"
+          name="smgov_businesslegalname"
+          type="text"
+        />
+      </div>
+      <div>
+        <label for="userMinistry">Ministry Acronym</label>
+        <input id="userMinistry" name="smgov_ministry" type="text" />
+      </div>
+      <div>
+        <label for="userOffice">Office Acronym</label>
+        <input id="userOffice" name="smgov_office" type="text" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
